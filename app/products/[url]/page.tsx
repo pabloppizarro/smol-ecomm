@@ -1,1 +1,3 @@
-<h1>Mouse redragon</h1>;
+export default function ProductViewPage() {
+  return <h1>Mouse redragon</h1>;
+}

@@ -1,9 +1,10 @@
 import Image from "next/image";
 
-export default function App() {
+const App = async () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>App</h1>
     </main>
   );
-}
+};
+export default App;

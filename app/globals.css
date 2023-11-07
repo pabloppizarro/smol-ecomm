@@ -7,7 +7,22 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url("../public/fonts/Poppins-Regular.ttf") format("ttf");
+}
 
+@font-face {
+  font-family: "PoppinsBold";
+  src: local("PoppinsBold") url("../public/fonts/Poppins-Bold.ttf")
+    format("ttf");
+}
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

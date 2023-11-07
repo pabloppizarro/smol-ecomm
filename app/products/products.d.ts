@@ -4,3 +4,9 @@ export type Product = {
   defaultPrice: number;
   media: string;
 };
+
+export type ProductRequest = {
+  products: [];
+  tagsUnique: [];
+  uniqueBrands: [];
+};
