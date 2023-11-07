@@ -1,7 +1,8 @@
-import { ProductRequest } from "./products";
+import ProductCardList from "./components/ProductCardList";
+import { ProductsRequest } from "./types/products";
 
 export default async function Page() {
-  const { products, tagsUnique, uniqueBrands }: ProductRequest = await fetch(
+  const { products, tagsUnique, uniqueBrands }: ProductsRequest = await fetch(
     "https://api.gamehard.tech/producto-venta/web-search"
   ).then((res) => res.json());
   return (
@@ -10,11 +11,11 @@ export default async function Page() {
         <p>Aside</p>
       </aside>
       <section>
-        <h1>Products!{products?.length}</h1>
-        <article>
-          <h3>Mouse Redragon</h3>
-          <p>$2342</p>
-        </article>
+        <h1 className=" font-poppins">
+          Our Products! (seeing: {products.length})
+        </h1>
+
+        <ProductCardList products={products}></ProductCardList>
       </section>
     </div>
   );

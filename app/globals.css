@@ -14,14 +14,12 @@
 }
 @font-face {
   font-family: "Poppins";
-  src: local("Poppins"),
-    url("../public/fonts/Poppins-Regular.ttf") format("ttf");
+  src: local("Poppins"), url("./fonts/Poppins-Regular.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "PoppinsBold";
-  src: local("PoppinsBold") url("../public/fonts/Poppins-Bold.ttf")
-    format("ttf");
+  src: local("PoppinsBold") url("./fonts/Poppins-Bold.ttf") format("ttf");
 }
 /* @media (prefers-color-scheme: dark) {
   :root {

@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="grid justify-center p-4 border bg-transparent w-full">
+    <header className=" font-poppinsBold text-lg grid justify-center p-4 border bg-transparent w-full">
       <div className="top">
         <input
           className="w-full rounded-md px-4 text-black border"
