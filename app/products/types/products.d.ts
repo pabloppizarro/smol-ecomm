@@ -3,7 +3,7 @@ import { ProductMedia } from "./product-media";
 export type Product = {
   name: string;
   brand: string;
-  defaultPrice: number;
+  listaPrecioItem: number; //listaPrecioItem
   productMedia: string;
   url: string;
   featured: Boolean;
