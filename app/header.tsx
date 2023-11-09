@@ -2,8 +2,11 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ShoppingBag } from "lucide-react";
+import { SearchIcon, ShoppingBag } from "lucide-react";
+import CategoriesNavMenu from "./components/CategoriesNavMenu";
+import { Input } from "@/components/ui/input";
 const links = [
+  { name: "All Products", href: "/products" },
   { name: "Brands", href: "/brands" },
   { name: "Exclusives", href: "/exclusives" },
   { name: "Offers", href: "/offers" },
@@ -18,34 +21,23 @@ export default function Header() {
         <Link className=" hover:font-bold text-xl" href={"/"}>
           TechStore
         </Link>
-        <input
-          className="w-full rounded-md px-4 text-black border"
-          type="text"
-          placeholder="search for prods..."
-        />
+        <div className="flex w-full max-w-sm items-center space-x-2">
+          <Input placeholder="Ryzen, RTX, Gaming keyboard..." />
+          <Button type="submit">
+            Go!
+            <SearchIcon></SearchIcon>
+          </Button>
+        </div>
         <div className="flex divide-x">
-          <Button>
-            hey
+          <Button variant={"ghost"}>
+            <span className="hidden sm:block">Cart</span>
             <ShoppingBag />
           </Button>
         </div>
       </div>
-      <nav>
-        <ul className="flex m-2 gap-8 justify-center">
-          {links.map((l) => (
-            <li>
-              <Link
-                key={l.name}
-                className=" hover:font-bold text-lg"
-                href={l.href}
-                style={pathname === l.href ? { fontWeight: "bold" } : {}}
-              >
-                {l.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className="hidden sm:flex m-2 justify-center">
+        <CategoriesNavMenu categories={[]}></CategoriesNavMenu>
+      </div>
     </header>
   );
 }
