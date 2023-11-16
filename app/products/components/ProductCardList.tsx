@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 
 export default function ProductCardList({ products }: { products: Product[] }) {
   return (
-    <section className="border flex gap-4 flex-wrap">
+    <section className="flex gap-4 flex-wrap">
       {products.map((p: Product, i: number) => (
         <ProductCard product={p} key={i}></ProductCard>
       ))}
