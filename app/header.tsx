@@ -16,27 +16,29 @@ const links = [
 export default function Header() {
   const pathname = usePathname();
   return (
-    <header className=" font-poppinsBold text-lg  justify-center p-4 border bg-transparent w-full">
-      <div className="md:w-8/12 flex items-center justify-around top gap-4 m-auto">
-        <Link className=" hover:font-bold text-xl" href={"/"}>
-          TechStore
-        </Link>
-        <div className="flex w-full max-w-sm items-center space-x-2">
-          <Input placeholder="Ryzen, RTX, Gaming keyboard..." />
-          <Button type="submit">
-            Go!
-            <SearchIcon></SearchIcon>
-          </Button>
-        </div>
-        <div className="flex divide-x">
-          <Button variant={"ghost"}>
+    <header className="z-10 relative w-[1280px] font-poppinsBold  bg-white">
+      <div className="fixed shadow-sm max-w-[inherit] py-4 bg-white">
+        <div className="flex items-center justify-center top gap-4 m-auto">
+          <Link className=" hover:font-bold text-xl" href={"/"}>
+            TechStore
+          </Link>
+          <div className="flex w-full max-w-sm items-center space-x-2">
+            <Input placeholder="Ryzen, RTX, Gaming keyboard..." />
+            <Button type="submit">
+              Go!
+              <SearchIcon></SearchIcon>
+            </Button>
+          </div>
+          <div className="flex divide-x">
+            {/* <Button variant={"ghost"}>
             <span className="hidden sm:block">Cart</span>
             <ShoppingBag />
-          </Button>
+          </Button> */}
+          </div>
         </div>
-      </div>
-      <div className="hidden sm:flex m-2 justify-center">
-        <CategoriesNavMenu categories={[]}></CategoriesNavMenu>
+        <div className="hidden sm:flex m-2 justify-center">
+          <CategoriesNavMenu categories={[]}></CategoriesNavMenu>
+        </div>
       </div>
     </header>
   );
